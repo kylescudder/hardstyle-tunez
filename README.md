@@ -124,3 +124,7 @@ Do not commit `.env`, `data/`, tokens, passwords, OAuth credentials, or generate
 - URL input must use HTTPS and an exact `youtube.com`, `music.youtube.com`, or `youtu.be` hostname. Lookalike and credential-bearing URLs are rejected before Lavalink sees them.
 - Settings use an atomic temporary-file rename in `/data`; no database or queue restoration is involved.
 - Logs include command names, guild IDs, error categories, and timings, but intentionally omit usernames and raw searches/URLs.
+
+## License
+
+Hardstyle Tunez is available under the [MIT License](LICENSE).
