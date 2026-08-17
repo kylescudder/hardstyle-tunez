@@ -46,6 +46,7 @@ plugins:
     clients:
       - MUSIC
       - TVHTML5_SIMPLY
+      - IOS
       - ANDROID_VR
       - WEB
       - WEBEMBEDDED
