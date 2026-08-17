@@ -47,6 +47,8 @@ plugins:
       - MUSIC
       - TVHTML5_SIMPLY
       - IOS
+      - MWEB
+      - ANDROID_MUSIC
       - ANDROID_VR
       - WEB
       - WEBEMBEDDED
