@@ -58,7 +58,7 @@ Requirements: Docker Engine with the Compose plugin, an outbound internet connec
 
 ```bash
 docker compose build
-docker compose run --rm bot npm run register
+docker compose run --rm bot node dist/register-commands.js
 docker compose up -d
 docker compose ps
 docker compose logs -f --tail=100
@@ -93,23 +93,23 @@ The final prune command removes unused image layers, not bot data. The `bot-data
 
 ## Local development
 
-Node.js 24.17 or newer is required.
+Node.js 24.17 or newer and [Bun](https://bun.sh) 1.4.2 are required. Bun installs dependencies and runs scripts; Node.js runs the bot.
 
 ```bash
-npm ci
+bun install --frozen-lockfile
 docker compose up -d lavalink
-npm run build
-npm run register:dev
-npm run dev
+bun run build
+bun run register:dev
+bun run dev
 ```
 
 Quality checks:
 
 ```bash
-npm run check
-npm run format:check
-npm test
-npm run build
+bun run check
+bun run format:check
+bun run test
+bun run build
 docker compose config --quiet
 ```
 
