@@ -1,30 +1,19 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
-  ],
+  "extends": ["config:recommended"],
   "prHourlyLimit": 5,
   "packageRules": [
     {
-      "matchManagers": [
-        "npm"
-      ],
+      "matchManagers": ["npm"],
       "rangeStrategy": "update-lockfile"
     },
     {
-      "matchManagers": [
-        "bun"
-      ],
+      "matchManagers": ["bun"],
       "rangeStrategy": "replace"
     },
     {
-      "matchManagers": [
-        "npm",
-        "bun"
-      ],
-      "matchUpdateTypes": [
-        "pin"
-      ],
+      "matchManagers": ["npm", "bun"],
+      "matchUpdateTypes": ["pin"],
       "enabled": false
     }
   ],
