@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 FROM oven/bun:1.4.2-alpine AS bun
 
-FROM node:24.22.0-alpine AS build
+FROM node:24.22.1-alpine AS build
 COPY --from=bun /usr/local/bin/bun /usr/local/bin/bun
 WORKDIR /app
 COPY package.json bun.lock ./
@@ -10,7 +10,7 @@ COPY tsconfig.json tsconfig.build.json ./
 COPY src ./src
 RUN bun run build
 
-FROM node:24.22.0-alpine AS runtime
+FROM node:24.22.1-alpine AS runtime
 COPY --from=bun /usr/local/bin/bun /usr/local/bin/bun
 ENV NODE_ENV=production
 WORKDIR /app
