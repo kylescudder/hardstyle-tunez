@@ -21,7 +21,7 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "discord.js": "14.27.0",
+    "discord.js": "14.28.0",
     "shoukaku": "4.3.0"
   },
   "devDependencies": {
