@@ -128,3 +128,12 @@ Do not commit `.env`, `data/`, tokens, passwords, OAuth credentials, or generate
 ## License
 
 Hardstyle Tunez is available under the [MIT License](LICENSE).
+
+## End-to-end check
+
+`bun run test:e2e` runs the slash-command journey in `e2e/`. It covers `/play` through
+`/queue`, `/pause`, `/resume`, `/volume` (persisted to `settings.json`), `/skip`,
+`/now-playing` and `/stop`, plus the voice-channel ownership and input-validation errors.
+The real interaction handlers, `MusicManager`, `GuildPlayer` and `SettingsStore` all run.
+Only the Discord gateway and the Lavalink node are faked, so no token, server or YouTube
+access is needed. Pull requests run it in the **E2E tests** job.
